@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <audio id="audio" src="./assets/sounds/01.mp3">Этот браузер не поддерживает формат аудио. Попробуйте другой браузер</audio>
+    <div class="player">
+        <div class="audio-container">
+          <div class="player-controls">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon" id="play_pause"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+          <div class="player-navigation">
+            <div class="track-title"></div>
+            <div class="progress-container">
+              <input type="range" class="progress-bar" max="100" min="0" value="0" step="1">
+            </div>
+            <div class="time-volume-container">
+              <div class="time-duration"></div>
+              <div class="volume">
+                <button class="volume-on-off"><img class="volume-icon" src="./assets/icons/volume-on.png" alt="volume-on"></button>
+                <input type="range" class="volume-bar" min="0.0" max="1.0" step="0.1" value="0.5">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <ul class="play-list">
+          <li class="play-item track-coloured"><button class="play-exact country"></button><p class="play-exact-text">А в моей стране всё есть</p></li>
+          <li class="play-item"><button class="play-exact women"></button><p class="play-exact-text">Женщина в лексусе</p></li>
+          <li class="play-item"><button class="play-exact pants"></button><p class="play-exact-text">Песня про трусы</p></li>
+          <li class="play-item"><button class="play-exact hypothetically"></button><p class="play-exact-text">Чисто гипотетически</p></li>
+        </ul>
+    </div>
+
+    <fieldset class="settings">
+      <legend><img class="settings-icon" src="./assets/icons/settings-gear.png" alt="settings"></legend>
+      <span class="settings-title">Настройки</span>
+      <span><img class="settings-icon settings-dropdown" src="./assets/icons/drop-down-main.png" alt="settings"></span>
+      <div class="settings-content inactive">
+    
+      <span class="languageSwitch">Выбрать язык</span>
+      <span><img class="settings-icon langChooseDrop" src="./assets/icons/drop-down-additional.png" alt="settings"></span>
+      <form class="settings-language inactive">
+        <label class="labelRu"><input type="radio" name="languageChoose" id="languageChooseRu" value="русский" checked>Ru</label>
+        
+        <label class="labelEn"><input type="radio" name="languageChoose" id="languageChooseEn" value="английский">En</label>
+      </form>
+    
+        <br>
+        <span class="settings-blocks-title">Показать/скрыть блоки</span>
+        <!--дропдаун-->
+        <span><img class="settings-icon blocksDisplayNone" src="./assets/icons/drop-down-additional.png" alt="settings"></span>
+        
+        <!--показывать или скрывать блок при нажати на дропдаун-->
+        <div class="settings-block-wrapper inactive"> 
+          <form class="settings-blocks-visibility">
+            <span class="timeSwitch">время</span>
+            <label class="timeOn"><input type="radio" name="timeChoose" id="timeChooseOn" checked><img class="settings-icon"
+                src="./assets/icons/settings-add.png" alt="timeChooseOn"></label>
+            <label class="timeOff"><input type="radio" name="timeChoose" id="timeChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="timeChooseOff"></label>
+          </form>
+
+          <form class="settings-blocks-visibility">
+            <span class="dateSwitch">дата</span>
+            <label class="dateOn"><input type="radio" name="dateChoose" id="dateChooseOn" checked><img class="settings-icon"
+            src="./assets/icons/settings-add.png" alt="dateChooseOn"></label>
+            <label class="dateOff"><input type="radio" name="dateChoose" id="dateChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="dateChooseOff"></label>
+          </form>
+
+          <form class="settings-blocks-visibility">
+            <span class="greetingSwitch">приветствие</span>
+            <label class="greetingOn"><input type="radio" name="greetingChoose" id="greetingChooseOn" checked><img class="settings-icon"
+            src="./assets/icons/settings-add.png" alt="greetingChooseOn"></label>
+            <label class="greetingOff"><input type="radio" name="greetingChoose" id="greetingChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="greetingChooseOff"></label>
+          </form>
+
+          <form class="settings-blocks-visibility">
+            <span class="quoteSwitch">цитата</span>
+            <label class="quoteOn"><input type="radio" name="quoteChoose" id="quoteChooseOn" checked><img
+            class="settings-icon" src="./assets/icons/settings-add.png" alt="quoteChooseOn"></label>
+            <label class="quoteOff"><input type="radio" name="quoteChoose" id="quoteChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="quoteChooseOff"></label>
+          </form>
+
+          <form class="settings-blocks-visibility">
+            <span class="weatherSwitch">погода</span>
+            <label class="weatherOn"><input type="radio" name="weatherChoose" id="weatherChooseOn" checked><img class="settings-icon"
+            src="./assets/icons/settings-add.png" alt="weatherChooseOn"></label>
+            <label class="weatherOff"><input type="radio" name="weatherChoose" id="weatherChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="weatherChooseOff"></label>
+          </form>
+          
+          <form class="settings-blocks-visibility">
+            <span class="audioSwitch">аудио</span>
+            <label class="audioOn"><input type="radio" name="audioChoose" id="audioChooseOn" checked><img class="settings-icon"
+            src="./assets/icons/settings-add.png" alt="audioChooseOn"></label>
+            <label class="audioOff"><input type="radio" name="audioChoose" id="audioChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="audioChooseOff"></label>
+          </form>
+
+          <form class="settings-blocks-visibility">
+            <span class="toDoListSwitch">список дел</span>
+            <label class="toDoListOn"><input type="radio" name="toDoListChoose" id="toDoListChooseOn" checked><img class="settings-icon"
+            src="./assets/icons/settings-add.png" alt="toDoListChooseOn"></label>
+            <label class="toDoListOff"><input type="radio" name="toDoListChoose" id="toDoListChooseOff"><img class="settings-icon"
+            src="./assets/icons/settings-delete.png" alt="toDoListChooseOff"></label>
+          </form>
+        </div>
+        
+      </div>
+    
+    </fieldset>
+
+    <div class="translator-weather-container">
+      <div class="translator">
+        <button class="english">EN</button>
+        <button class="russian activeLang">RU</button>
+      </div>
+
+      <div class="weather">
+        <input type="text" class="city" placeholder="Минск" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </div>
+    
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" id="greetingName" class="name" placeholder="Введите имя">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="toDoContainer">
+      <input type="text" name="addItem" class="addItem" id="addItem" placeholder="Чем позанимаемся?">
+      <button class="add" type="submit">Добавить</button>
+      <button class="delete" type="submit">Удалить</button>
+      <div class="list-container">
+        <ul class="toDoList"></ul>
+      </div>
+    </div>
+
+    <div class="quote-container">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    
+  </footer>
+  <script src="./js/timeDateGreeting.js"></script>
+  <script src="./js/backgrSlider.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/quotes.js"></script>
+  <script src="./js/audioPlayer.js"></script>
+  <script src="./js/toDoList.js"></script>
+  <script src="./js/settings.js"></script>
+
+</body>
+</html>
