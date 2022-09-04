@@ -1,6 +1,6 @@
 # App-Momentum
 https://anastasiashalukhina.github.io/App-Momentum/
-Google like application, Java Script
+### Google like application, Java Script
 ## Audioplayer: turn on/off play, next/previous track, turn on/off sound, make lowder/quiet, own button for turning on/off track, time track
 ## Current time and date reflection
 ## Greeting - save name after reload of page
